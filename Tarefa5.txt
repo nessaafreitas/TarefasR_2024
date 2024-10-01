@@ -1,0 +1,15 @@
+#? Filtrar todos os pokemons com bee ou bel no nome
+
+dados %>%
+  filter(grepl("[Bb]ee", name) | grepl("[Bb]el", name))
+
+dados %>%
+  filter(grepl("[Bb]ee|[Bb]el", name))
+
+dados %>%
+  filter(grepl("[Bb]e[el]", name))
+
+dados[grepl("[Bb]e[el]", dados$name),]
+
+grepl("[Bb]ee", dados$name)
+grepl("[Bb]el", dados$name)
